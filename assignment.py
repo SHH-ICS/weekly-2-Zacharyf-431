@@ -4,7 +4,7 @@
 import math 
 x = float(input("Enter the diameter: "))
 y = x / 2
-area = math.pi * x
-circumference = math.pi * y **2
-print("The Area is:", area, "unit²")
+circumference = math.pi * x
+area = math.pi * y **2
 print("The Circumference is:", circumference)
+print("The Area is:", area, "unit²")
