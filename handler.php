@@ -11,7 +11,7 @@
     
     <?php
     $diameter = (float) $_POST['diameter'];
-    if (is_numeric($diameter) && $diameter > 0) {
+    if (is_numeric($diameter) && $diameter > 0)
       $radius = $diameter / 2;
       $area = pi() * pow($radius, 2);
       $circumference = pi() * $diameter;
