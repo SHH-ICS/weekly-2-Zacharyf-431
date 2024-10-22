@@ -1,58 +1,74 @@
 <!DOCTYPE HTML>
 <head>
-  <title>Assignment 2</title>
+  <title>Circumference and Area calculator</title>
 
   <!-- MDL Inclusions -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
 </head>
-<!--This is the MDL Layout-->
+
 <body>
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout-icon"></div>
+  <!-- Uses a header that contracts as the page scrolls down. -->
+  <style>
+    .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
+      padding-right: 0;
+    }
+  </style>
+
+  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout__title">Area and Circumference of a Circle</span>
+        <!-- Title -->
+        <span class="mdl-layout-title">Area and Circumference of a Circle</span>
         <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+          </div>
+        </div>
+      </div>
+      <!-- Bottom row, not visible on scroll -->
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="#">Unit 1</a>
-          <a class="mdl-navigation__link" href="#">Unit 2</a>
-          <a class="mdl-navigation__link" href="#">Unit 3</a>
-          <a class="mdl-navigation__link" href="#">Unit 4</a>
-          <a class="mdl-navigation__link" href="#">Unit 5</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout__title">Area and Circumference of a Circle</span>
+      <span class="mdl-layout-title">Title</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Unit 1</a>
-        <a class="mdl-navigation__link" href="#">Unit 2</a>
-        <a class="mdl-navigation__link" href="#">Unit 3</a>
-        <a class="mdl-navigation__link" href="#">Unit 4</a>
-        <a class="mdl-navigation__link" href="#">Unit 5</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
-      <div>Content</div>
+      <div class="page-content">
+        <center>
+          <!-- Numeric Textfield -->
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+              <label class="mdl-textfield__label" for="sample2">Enter a Number...</label>
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          </form>
+          <!-- Colored raised button -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            Enter
+          </button>
+      </div>
     </main>
   </div>
-
-
-  <center>
-<!-- Numeric Textfield -->
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-    <label class="mdl-textfield__label" for="sample2">Number...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">
-    Submit Number
-  </button>
-  </form>
-  </center>
-  </body>
-  </html>
